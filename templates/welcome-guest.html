@@ -1,42 +1,49 @@
-<aside class="sidebar">
-    <div class="logo"><img src="images/logo_sidebar.png" alt=""></div>
-    <hr>
-    <nav>
-        <ul>
-            <li class="single-menu-element">
-                <a href="#/" class="single-menu-element-link">
-                    Home
-                </a>
-            </li>
+<!--Navigation bar-->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#/">ELECTRIC CARS BLOG</a>
+        </div>
 
-            <li class="single-menu-element">
-                <a href="#/login" class="single-menu-element-link">
-                    Login
-                </a>
-            </li>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="single-menu-element"><a href="#/" class="single-menu-element-link">Home</a></li>
+                <li class="single-menu-element"><a href="#/login" class="single-menu-element-link">Login</a></li>
+                <li class="single-menu-element"><a href="#/register" class="single-menu-element-link">Register</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
 
-            <li class="single-menu-element">
-                <a href="#/register" class="single-menu-element-link">
-                    Register
-                </a>
-            </li>
-        </ul>
 
-        <hr>
-        <h2 class="recent-posts-title">Recent Posts</h2>
-        <hr>
-
-        <ul class="recent-posts">
-        </ul>
-    </nav>
-</aside>
 <main class="main-content">
-    <header class="blog-title">
-        <h3>home</h3>
-    </header>
-    <ul class="articles" id="article">
-    </ul>
-    <footer>
-        <p class="footer-text">&copy; Software University Foundation, No Rights Reserved</p>
-    </footer>
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+            <ul class="articles" id="article">
+            </ul>
+          </div>
+      </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+          <div class="col-lg-12">
+              <p><span class="glyphicon glyphicon-flash" aria-hidden="true"></span>Electric Cars Blog - Team project for &ldquo;Software Technologies - June 2016&rdquo; course, part of Software University's JavaScript Dev program.</p>
+          </div>
+      </div>
+      <!-- /.row -->
+    </div>
+  </footer>
 </main>

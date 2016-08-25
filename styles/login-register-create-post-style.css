@@ -1,0 +1,142 @@
+/****FORM STYLES****/
+.user-login-block {
+    border-radius: 15px;
+    background-color: #f2f2f2;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    margin: 2% auto;
+    width: 35%;
+    height: 55%;
+    padding: 10px;
+    text-align: center;
+}
+
+form {
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+}
+
+.form-title {
+    font: 1.15em Open Sans;
+    font-weight: 400;
+    color: #4092D9;
+    padding: 0 5px 5px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+input {
+    border-radius: 30px;
+    border: 3px solid #f2f2f2;
+    width: 60%;
+    height: 35px;
+    margin: 0 auto 10px;
+    text-align: center;
+}
+
+input:focus {
+    font: 0.8em Open Sans;
+    font-weight: 100;
+    outline: none;
+    border: 3px solid #4092D9;
+}
+
+#register-request-button,
+#login-request-button {
+    font: 1em Open Sans;
+    color: white;
+    background-color: #4092D9;
+    padding: 8px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 30px;
+    width: 50%;
+}
+
+#register-request-button:hover,
+#login-request-button:hover {
+    background-color: #565656;
+}
+
+.form-link {
+    text-decoration: none;
+    color: #4092D9;
+    font: 1em Open Sans;
+    font-weight: 900;
+    padding: 10px;
+}
+
+#register-title {
+    width: 200px;
+}
+
+/****NEW POST STYLES****/
+
+.new-post-title {
+    width: 250px;
+}
+
+.new-post-block {
+    background: #dadada;
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 20px;
+
+}
+
+#editor-title {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font: 24px Lato-Black;
+    text-align: center;
+}
+
+#post-form {
+    background: #f2f2f2;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.single-element-form {
+    display: inline-block;
+    width: 40%;
+    padding-top: 10px;
+}
+
+.content-field {
+    resize: none;
+    border: 3px solid #f2f2f2;
+    outline: none;
+    width: 550px;
+    height: 300px;
+    border-radius: 15px;
+    text-align: left;
+    font: 12px Lato-Light;
+    padding: 10px;
+}
+
+.content-field:focus {
+    font: 12px Lato;
+    font-weight: 100;
+    outline: none;
+    border: 3px solid #4092D9;
+}
+
+#create-new-post-request-button:hover {
+    background-color: #565656;
+}
+
+#create-new-post-request-button {
+    font: 1em Open Sans;
+    color: white;
+    background-color: #4092D9;
+    padding: 8px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 30px;
+    width: 50%;
+}

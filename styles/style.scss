@@ -1,0 +1,67 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Cinzel);
+
+body {
+  padding-top: 70px;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 0.05em;
+  font-size: 16px;
+  nav{
+    .container{
+      .navbar-header {
+        color: #4092D9;
+        font-weight: bold;
+        font-size: 0.8em;
+      }
+      .navbar-brand {
+        color: #4092D9;
+        font-weight: bold;
+        font-size: 1.5em;
+        font-family: Cinzel;
+      }
+      #bs-example-navbar-collapse-1 ul li a{
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 1em;
+        color: black;
+        &:hover{
+          color: #4092D9;
+          background-color: #F1F1F1;
+        }
+      }
+    }
+  }
+    .main-content{
+      .container{
+        .row{
+          div{
+            ul{
+              list-style: none;
+
+              .title {
+                  font: 2em Open Sans;
+                  font-weight: bold;
+              }
+
+              .subtitle {
+                  font: 1em Open Sans;
+                  margin-left: 1%;
+              }
+
+              .content {
+                  font: 1em Open Sans;
+                  margin-left: 1%;
+                  word-wrap: break-word;
+              }
+            }
+          }
+        }
+      }
+    footer {
+      margin-top: 1%;
+      margin-bottom: 1%;
+      color: #4092D9;
+      text-align: center;
+    }
+  }
+}
