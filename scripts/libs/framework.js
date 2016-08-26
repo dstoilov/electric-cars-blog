@@ -103,37 +103,45 @@ function showPopup(type, text, position) {
 
     function _showSuccessPopup(text, position) {
         noty({
+            theme: 'defaultTheme',
             text: text,
-            timeout: 4000,
+            timeout: 2000,
             layout: 'bottom',
-            type: 'success'
+            type: 'success',
+            closeWith: ['click'],
         });
     }
 
     function _showInfoPopup(text, position) {
         noty({
+            theme: 'defaultTheme',
             text: text,
-            timeout: 4000,
+            timeout: 2000,
             layout: 'bottom',
-            type: 'information'
+            type: 'information',
+            closeWith: ['click']
         });
     }
 
     function _showWarningPopup(text, position) {
         noty({
+            theme: 'defaultTheme',
             text: text,
-            timeout: 4000,
+            timeout: 2000,
             layout: 'bottom',
-            type: 'warning'
+            type: 'warning',
+            closeWith: ['click']
         });
     }
 
     function _showErrorPopup(text, position) {
         noty({
+            theme: 'defaultTheme',
             text: text,
-            timeout: 4000,
+            timeout: 2000,
             layout: 'bottom',
-            type: 'error'
+            type: 'error',
+            closeWith: ['click']
         });
     }
 
