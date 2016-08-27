@@ -1,5 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 @import url(https://fonts.googleapis.com/css?family=Cinzel);
+.col-center {
+  float: none;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 body {
   padding-top: 70px;
   height: 100%;
@@ -17,8 +23,8 @@ body nav .container .navbar-header {
 
 body nav .container .navbar-brand {
   color: #4092D9;
-  font-weight: bold;
-  font-size: 1.1em;
+  font-weight: bolder;
+  font-size: 1.3em;
   font-family: Cinzel;
   letter-spacing: none;
 }
@@ -35,181 +41,165 @@ body nav .container #bs-example-navbar-collapse-1 ul li a:hover {
   background-color: #F1F1F1;
 }
 
-body .wrapper .main-content .container .row div div ul {
+body .wrapper .main-content .container .row div ul {
   list-style: none;
   padding-left: 1.5%;
   padding-right: 1.5%;
 }
 
-body .wrapper .main-content .container .row div div ul .single-post .panel-default {
+body .wrapper .main-content .container .row div ul .single-post div {
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
 
-body .wrapper .main-content .container .row div div ul .single-post .panel-default .panel-body {
+body .wrapper .main-content .container .row div ul .single-post div .panel-body {
   text-overflow: ellipsis;
 }
 
-body .wrapper .main-content .container .row div div ul .single-post .panel-default .panel-body article .title {
+body .wrapper .main-content .container .row div ul .single-post div .panel-body article .title {
   margin-top: 0;
   font: 2em Open Sans;
   font-weight: bold;
   text-overflow: ellipsis;
 }
 
-body .wrapper .main-content .container .row div div ul .single-post .panel-default .panel-body article .subtitle {
+body .wrapper .main-content .container .row div ul .single-post div .panel-body article .subtitle {
   font: 1em Open Sans;
   margin-left: 1%;
   text-overflow: ellipsis;
 }
 
-body .wrapper .main-content .container .row div div ul .single-post .panel-default .panel-body article .content {
+body .wrapper .main-content .container .row div ul .single-post div .panel-body article .content {
   font: 1em Open Sans;
   margin-left: 1%;
   word-wrap: break-word;
   text-overflow: ellipsis;
 }
 
-body .wrapper .main-content .user-login-block {
+body .wrapper .main-content #user-login-block {
   border-radius: 10px;
   background-color: #f2f2f2;
-  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
-  margin: 2% auto;
-  width: 35%;
-  height: 55%;
-  padding: 10px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  padding: 1%;
   text-align: center;
 }
 
-body .wrapper .main-content .user-login-block form {
-  margin: 0 auto;
+body .wrapper .main-content #user-login-block div form {
   text-align: center;
   display: block;
 }
 
-body .wrapper .main-content .user-login-block form input {
+body .wrapper .main-content #user-login-block div form input {
+  margin: 0 auto;
+  width: 90%;
+}
+
+body .wrapper .main-content #user-login-block div form #login-request-button,
+body .wrapper .main-content #user-login-block div form #register-request-button {
+  font: 1em Open Sans;
+  padding: 1%;
+  margin-top: 3%;
+  margin-bottom: 2%;
+  font-weight: bold;
+  border-radius: 6px;
+  width: 70%;
+  color: white;
+  background-color: #4092D9;
+}
+
+body .wrapper .main-content #user-login-block div form label {
+  font-size: 1em;
+  color: #4092D9;
+  padding: 0 5px 5px;
+  text-align: center;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+body .wrapper .main-content #new-post-block {
   border-radius: 10px;
-  border: 3px solid #4092D9;
-  width: 60%;
-  height: 35px;
-  margin: 0 auto 0.2%;
+  background-color: #f2f2f2;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  padding: 1%;
   text-align: center;
 }
 
-body .wrapper .main-content .user-login-block form input:focus {
-  font-size: 0.9em;
-  outline: none;
-  border: 3px solid #4092D9;
+body .wrapper .main-content #new-post-block form {
+  text-align: center;
+  display: block;
 }
 
-body .wrapper .main-content .user-login-block form #login-request-button,
-body .wrapper .main-content .user-login-block form #register-request-button {
-  font: 1em Open Sans;
-  color: white;
-  background-color: #4092D9;
-  padding: 1%;
-  margin-top: 3%;
-  margin-bottom: 1%;
+body .wrapper .main-content #new-post-block form ul {
+  margin-bottom: 0.5%;
+}
+
+body .wrapper .main-content #new-post-block form ul li {
+  display: inline-block;
+  padding-top: 1%;
+  background-color: #f2f2f2;
   border: none;
-  border-radius: 10px;
-  width: 50%;
+  margin-bottom: 0.5%;
 }
 
-body .wrapper .main-content .user-login-block form #login-request-button:hover,
-body .wrapper .main-content .user-login-block form #register-request-button:hover {
-  background-color: #565656;
+body .wrapper .main-content #new-post-block form ul li .form-group {
+  font: 1em Open Sans;
+  margin-bottom: 2%;
 }
 
-body .wrapper .main-content .user-login-block form .form-label {
-  font-size: 1.15em;
+body .wrapper .main-content #new-post-block form ul li .form-group label {
+  font-size: 1em;
   color: #4092D9;
   padding: 0 5px 5px;
   text-align: center;
   margin-bottom: 0.5%;
 }
 
-body .wrapper .main-content .new-post-block {
+body .wrapper .main-content #new-post-block form ul li .form-group input {
   border-radius: 10px;
-  background-color: #f2f2f2;
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
-  margin: 2% auto;
-  width: 40%;
-  padding: 1%;
-  text-align: center;
-  border-radius: 10px;
-}
-
-body .wrapper .main-content .new-post-block form {
-  margin: 0 auto;
-}
-
-body .wrapper .main-content .new-post-block form ul li {
-  display: inline-block;
-  width: 40%;
-  padding-top: 10px;
-  background-color: #f2f2f2;
-  border: none;
-}
-
-body .wrapper .main-content .new-post-block form ul li .form-group {
-  font: 1em Open Sans;
-  margin: 0 auto;
-}
-
-body .wrapper .main-content .new-post-block form ul li .form-group label {
-  font-weight: bold;
-}
-
-body .wrapper .main-content .new-post-block form ul li .form-group input {
-  border-radius: 10px;
-  border: 3px solid #4092D9;
-  width: 90%;
-  height: 35px;
   text-align: center;
   margin: 0 auto;
   background-color: white;
 }
 
-body .wrapper .main-content .new-post-block form ul li .form-group input:focus {
-  border: 3px solid #4092D9;
-}
-
-body .wrapper .main-content .new-post-block form label {
-  font: 1em Open Sans;
+body .wrapper .main-content #new-post-block form label {
+  font-size: 1em;
+  color: #4092D9;
+  padding: 0 5px 5px;
   text-align: center;
-  font-weight: bold;
+  margin-bottom: 0.5%;
 }
 
-body .wrapper .main-content .new-post-block form .content-field {
-  border: 3px solid #4092D9;
+body .wrapper .main-content #new-post-block form .content-field {
   outline: none;
-  width: 550px;
-  height: 300px;
   border-radius: 10px;
   text-align: left;
   font-size: 1em;
   padding: 10px;
+  width: 90%;
+  min-height: 200px;
 }
 
-body .wrapper .main-content .new-post-block form .content-field:focus {
+body .wrapper .main-content #new-post-block form .content-field:focus {
   font-size: 1em;
   border: 3px solid #4092D9;
 }
 
-body .wrapper .main-content .new-post-block form #create-new-post-request-button {
+body .wrapper .main-content #new-post-block form #create-new-post-request-button {
   font: 1em Open Sans;
+  padding: 1%;
+  margin-bottom: 0.5%;
+  font-weight: bold;
+  border-radius: 6px;
+  width: 50%;
   color: white;
   background-color: #4092D9;
-  padding: 8px;
-  margin-top: 15px;
-  margin-bottom: 10px;
-  border: none;
-  border-radius: 10px;
-  width: 50%;
 }
 
-body .wrapper .main-content .new-post-block form #create-new-post-request-button:hover {
-  background-color: #565656;
+body .wrapper .main-content nav {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
 }
 
 body .wrapper .main-content footer {
