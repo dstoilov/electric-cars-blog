@@ -52,28 +52,32 @@ body .wrapper .main-content .container .row div ul .single-post div {
   border-radius: 10px;
 }
 
-body .wrapper .main-content .container .row div ul .single-post div .panel-body {
-  text-overflow: ellipsis;
-}
-
 body .wrapper .main-content .container .row div ul .single-post div .panel-body article .title {
   margin-top: 0;
   font: 2em Open Sans;
   font-weight: bold;
-  text-overflow: ellipsis;
 }
 
 body .wrapper .main-content .container .row div ul .single-post div .panel-body article .subtitle {
   font: 1em Open Sans;
   margin-left: 1%;
-  text-overflow: ellipsis;
 }
 
 body .wrapper .main-content .container .row div ul .single-post div .panel-body article .content {
   font: 1em Open Sans;
   margin-left: 1%;
+  margin-bottom: 0.5%;
   word-wrap: break-word;
-  text-overflow: ellipsis;
+  text-align: justify;
+  max-height: 4em;
+  width: 95%;
+  overflow: hidden;
+  display: block;
+}
+
+body .wrapper .main-content .container .row div ul .single-post div .panel-body article a {
+  margin-left: 1%;
+  margin-bottom: 1%;
 }
 
 body .wrapper .main-content #user-login-block {
@@ -196,8 +200,7 @@ body .wrapper .main-content #new-post-block form #create-new-post-request-button
 }
 
 body .wrapper .main-content nav {
-  position: absolute;
-  bottom: 50px;
+  position: relative;
   left: 0;
   right: 0;
 }
@@ -209,6 +212,6 @@ body .wrapper .main-content footer {
   bottom: 0;
   left: 0;
   height: 50px;
-  position: absolute;
+  position: relative;
   right: 0;
 }

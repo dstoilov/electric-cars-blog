@@ -1,63 +1,60 @@
-class HomeView{
-    constructor(wrapperSelector, mainContentSelector){
-        this._wrapperSelector=wrapperSelector;
-        this._mainContentSelector=mainContentSelector;
+class HomeView {
+    constructor(wrapperSelector, mainContentSelector) {
+        this._wrapperSelector = wrapperSelector;
+        this._mainContentSelector = mainContentSelector;
     }
 
-    showGuestPage(sideBarData, mainData){
-        let _that=this
+    showGuestPage(mainData) {
+        let _that = this
 
-            $.get('templates/welcome-guest.html', function(template){
-                let renderedWrapper=Mustache.render(template, null)
+        $.get('templates/welcome-guest.html', function(template) {
+            let renderedWrapper = Mustache.render(template, null)
 
-                $(_that._wrapperSelector).html(renderedWrapper)
+            $(_that._wrapperSelector).html(renderedWrapper)
 
-                $.get('templates/recent-posts.html',function(template){
-                    let recentPosts={
-                        recentPosts: sideBarData
-                    }
+            $.get('templates/posts.html', function(template) {
+                let blogPosts = {
+                    blogPosts: mainData
+                }
+                let renderedPosts = Mustache.render(template, blogPosts)
+                $('.articles').html(renderedPosts)
+                // Read More/Less functionality
+                $('.content').readmore({
+                    speed: 100,
+                    lessLink: '<a href="#">Read less</a>',
+                    moreLink: '<a href="#">Read More...</a>',
+                });
+            })
 
-                    let renderedRecentPosts=Mustache.render(template,recentPosts)
-                    $('.recent-posts').html(renderedRecentPosts)
-                })
-
-                $.get('templates/posts.html',function(template){
-                    let blogPosts={
-                        blogPosts: mainData
-                    }
-                    let renderedPosts=Mustache.render(template,blogPosts)
-                    $('.articles').html(renderedPosts)
-                })
-
-    })
-}
-
-    showUserPage(sideBarData,mainData){
-    let _that=this
-
-    $.get('templates/welcome-user.html', function(template){
-        let renderedWrapper=Mustache.render(template, null)
-
-        $(_that._wrapperSelector).html(renderedWrapper)
-
-        $.get('templates/recent-posts.html',function(template){
-            let recentPosts={
-                recentPosts: sideBarData
-            }
-
-            let renderedRecentPosts=Mustache.render(template,recentPosts)
-            $('.recent-posts').html(renderedRecentPosts)
         })
 
-        $.get('templates/posts.html',function(template){
-            let blogPosts={
-                blogPosts: mainData
-            }
-            let renderedPosts=Mustache.render(template,blogPosts)
-            $('.articles').html(renderedPosts)
+
+    }
+
+    showUserPage(mainData) {
+        let _that = this
+
+        $.get('templates/welcome-user.html', function(template) {
+            let renderedWrapper = Mustache.render(template, null)
+
+            $(_that._wrapperSelector).html(renderedWrapper)
+
+
+            $.get('templates/posts.html', function(template) {
+                let blogPosts = {
+                    blogPosts: mainData
+                }
+                let renderedPosts = Mustache.render(template, blogPosts)
+                $('.articles').html(renderedPosts)
+                // Read More/Less functionality
+                $('.content').readmore({
+                    speed: 100,
+                    lessLink: '<a href="#">Read less</a>',
+                    moreLink: '<a href="#">Read More</a>',
+                });
+            })
+
         })
 
-    })
+    }
 }
-}
-

@@ -5,6 +5,7 @@
     margin-right: auto;
     margin-left: auto;
 }
+
 body {
     padding-top: 70px;
     height: 100%;
@@ -52,24 +53,31 @@ body {
                                     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
                                     border-radius: 10px;
                                     .panel-body {
-                                        text-overflow: ellipsis;
                                         article {
                                             .title {
                                                 margin-top: 0;
                                                 font: 2em Open Sans;
                                                 font-weight: bold;
-                                                text-overflow: ellipsis;
                                             }
                                             .subtitle {
                                                 font: 1em Open Sans;
                                                 margin-left: 1%;
-                                                text-overflow: ellipsis;
                                             }
                                             .content {
                                                 font: 1em Open Sans;
                                                 margin-left: 1%;
+                                                margin-bottom: 0.5%;
                                                 word-wrap: break-word;
-                                                text-overflow: ellipsis;
+                                                text-align: justify;
+                                                max-height: 4em;
+                                                width: 95%;
+                                                overflow: hidden;
+                                                display: block;
+
+                                            }
+                                            a {
+                                              margin-left: 1%;
+                                              margin-bottom: 1%;
                                             }
                                         }
                                     }
@@ -90,9 +98,9 @@ body {
                     form {
                         text-align: center;
                         display: block;
-                        input{
-                          margin: 0 auto;
-                          width: 90%;
+                        input {
+                            margin: 0 auto;
+                            width: 90%;
                         }
                         #login-request-button,
                         #register-request-button {
@@ -183,15 +191,13 @@ body {
                         width: 50%;
                         color: white;
                         background-color: #4092D9;
-
                     }
                 }
             }
-            nav{
-              position: absolute;
-              bottom: 50px;
-              left: 0;
-              right: 0;
+            nav {
+                position: relative;
+                left: 0;
+                right: 0;
             }
             footer {
                 color: #4092D9;
@@ -200,7 +206,7 @@ body {
                 bottom: 0;
                 left: 0;
                 height: 50px;
-                position: absolute;
+                position: relative;
                 right: 0;
             }
         }

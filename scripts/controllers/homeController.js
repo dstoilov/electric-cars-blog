@@ -7,7 +7,6 @@ class HomeController{
     }
     showGuestPage(){
         let _that=this;
-        let recentPosts=[];
         let requestUrl=this._baseServiceUrl+"/appdata/"+this._appKey+"/posts";
 
         this._requester.get(requestUrl,
@@ -20,12 +19,9 @@ class HomeController{
 
                 let currentId=1
 
-                for(let i=0;i<data.length && i<5;i++){ //show only the first 5 posts
-                    data[i].postId=currentId
-                    currentId++
-                    recentPosts.push(data[i])
-                }
-                _that._homeView.showGuestPage(recentPosts, data)
+                _that._homeView.showGuestPage(data)
+
+
 
             },
             function error(data){
@@ -36,7 +32,6 @@ class HomeController{
     }
     showUserPage(){
         let _that=this
-        let recentPosts=[]
         let requestUrl=this._baseServiceUrl+"/appdata/"+this._appKey+"/posts"
 
         this._requester.get(requestUrl,
@@ -50,12 +45,8 @@ class HomeController{
 
                 let currentId=1
 
-                for(let i=0;i<data.length && i<5;i++){ //show only the first 5 posts
-                    data[i].postId=currentId
-                    currentId++
-                    recentPosts.push(data[i])
-                }
-                _that._homeView.showUserPage(recentPosts, data)
+                _that._homeView.showUserPage(data)
+
 
             },
             function error(data){

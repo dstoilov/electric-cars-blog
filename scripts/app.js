@@ -1,4 +1,4 @@
-(function () {
+(function() {
 
     // Create your own kinvey application
 
@@ -22,14 +22,14 @@
 
     // Create HomeView, HomeController, UserView, UserController, PostView and PostController
 
-    let homeView= new HomeView(selector, mainContentSelector)
-    let homeController= new HomeController(homeView, requester, baseUrl, appKey)
+    let homeView = new HomeView(selector, mainContentSelector)
+    let homeController = new HomeController(homeView, requester, baseUrl, appKey)
 
-    let userView= new UserView(selector, mainContentSelector)
-    let userController= new UserController(userView, requester, baseUrl, appKey)
+    let userView = new UserView(selector, mainContentSelector)
+    let userController = new UserController(userView, requester, baseUrl, appKey)
 
-    let postView= new PostView(selector, mainContentSelector)
-    let postController= new PostController(postView, requester, baseUrl, appKey)
+    let postView = new PostView(selector, mainContentSelector)
+    let postController = new PostController(postView, requester, baseUrl, appKey)
 
     //homeController.showUserPage() //test view
     //userController.showRegisterPage() //test view
@@ -37,59 +37,59 @@
 
     initEventServices();
 
-    onRoute("#/", function () {
+    onRoute("#/", function() {
         // Check if user is logged in and if its not show the guest page, otherwise show the user page...
-        if(!authService.isLoggedIn()){
+        if (!authService.isLoggedIn()) {
             homeController.showGuestPage()
-        }
-        else{
+        } else {
             homeController.showUserPage()
         }
     });
 
-    onRoute("#/post-:id", function () {
+    onRoute("#/post-:id", function() {
         // Create a redirect to one of the recent posts...
-        let top=$("#post-" + this.params['id']).position().top
+        let top = $("#post-" + this.params['id']).position().top
         $(window).scrollTop(top)
     });
 
-    onRoute("#/login", function () {
+    onRoute("#/login", function() {
         // Show the login page...
         userController.showLoginPage(authService.isLoggedIn())
     });
 
-    onRoute("#/register", function () {
+    onRoute("#/register", function() {
         // Show the register page...
         userController.showRegisterPage(authService.isLoggedIn())
     });
 
-    onRoute("#/logout", function () {
+    onRoute("#/logout", function() {
         // Logout the current user...
         userController.logout()
     });
 
-    onRoute('#/posts/create', function () {
+    onRoute('#/posts/create', function() {
         // Show the new post page...
-        let data={
+        let data = {
             fullName: sessionStorage['fullName']
         }
         postController.showCreatePostPage(data, authService.isLoggedIn())
     });
 
-    bindEventHandler('login', function (ev, data) {
+    bindEventHandler('login', function(ev, data) {
         // Login the user...
         userController.login(data)
     });
 
-    bindEventHandler('register', function (ev, data) {
+    bindEventHandler('register', function(ev, data) {
         // Register a new user...
         userController.register(data)
     });
 
-    bindEventHandler('createPost', function (ev, data) {
+    bindEventHandler('createPost', function(ev, data) {
         // Create a new post...
         postController.createPost(data)
     });
 
     run('#/');
+
 })();
