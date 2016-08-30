@@ -1,5 +1,27 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 @import url(https://fonts.googleapis.com/css?family=Cinzel);
+
+@media screen and (max-width: 320px) {
+    body {font-size: 12px;}
+    body .wrapper .main-content footer {margin-top: 3%;}
+    body nav .container .navbar-brand {font-size: 1.2em;}
+    footer {margin-top: 5%;}
+}
+
+@media screen and (min-width: 321px) and (max-width: 768px) {
+    body {font-size: 14px;}
+    body .wrapper .main-content footer {margin-top: 3%;}
+    body nav .container .navbar-brand {font-size: 1.3em;}
+    footer {margin-top: 5%;}
+}
+
+@media screen and (min-width: 769px) {
+  body {font-size: 16px;}
+  body .wrapper .main-content footer {margin-top: 2%;}
+  body nav .container .navbar-brand {font-size: 1.5em;}
+  footer {margin-top: 1%;}
+}
+
 .col-center {
     float: none;
     margin-right: auto;
@@ -11,7 +33,6 @@ body {
     height: 100%;
     font-family: 'Open Sans', sans-serif;
     letter-spacing: 0.05em;
-    font-size: 16px;
     nav {
         .container {
             .navbar-header {
@@ -23,9 +44,7 @@ body {
             .navbar-brand {
                 color: #4092D9;
                 font-weight: bolder;
-                font-size: 1.3em;
                 font-family: Cinzel;
-                letter-spacing: none;
             }
             #bs-example-navbar-collapse-1 ul li a {
                 font-weight: bold;
@@ -198,14 +217,13 @@ body {
                 position: relative;
                 left: 0;
                 right: 0;
+                margin-bottom: 0;
             }
             footer {
                 color: #4092D9;
-                background-color: none;
                 text-align: center;
                 bottom: 0;
                 left: 0;
-                height: 50px;
                 position: relative;
                 right: 0;
             }
